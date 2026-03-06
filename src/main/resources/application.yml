@@ -1,0 +1,14 @@
+aws:
+  region: ${AWS_REGION:us-east-1}
+  apigateway:
+    blue:
+      id: ${AWS_APIGATEWAY_BLUE_ID:blue-api-id}
+      stage: ${AWS_APIGATEWAY_BLUE_STAGE:v1}
+    green:
+      id: ${AWS_APIGATEWAY_GREEN_ID:green-api-id}
+      stage: ${AWS_APIGATEWAY_GREEN_STAGE:v1}
+
+logging:
+  level:
+    com.example.apigateway: INFO
+    software.amazon.awssdk: WARN
